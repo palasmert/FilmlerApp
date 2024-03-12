@@ -90,6 +90,7 @@ MjUUIOKCug
                     <navigationItem key="navigationItem" title="Filmler" id="HgD-CF-NnZ"/>
                     <connections>
                         <outlet property="filmlerCollectionView" destination="xX1-ZG-TcT" id="YaV-sc-dXv"/>
+                        <segue destination="aeC-Gf-lFW" kind="presentation" identifier="toDetay" id="Iwa-OT-NY8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -101,11 +102,42 @@ MjUUIOKCug
             <objects>
                 <viewController id="aeC-Gf-lFW" customClass="DetaySayfa" customModule="FilmlerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wMC-5c-oNy">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="zZ6-1G-D85">
+                                <rect key="frame" x="96.666666666666686" y="142" width="200" height="558"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Django" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivo-G9-CjW">
+                                        <rect key="frame" x="18" y="0.0" width="163.66666666666666" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="django" translatesAutoresizingMaskIntoConstraints="NO" id="RXe-fY-KJl">
+                                        <rect key="frame" x="0.0" y="135" width="200" height="300"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-e9-HXI">
+                                        <rect key="frame" x="59.999999999999986" y="510" width="80.000000000000014" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="twq-cT-nYX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zZ6-1G-D85" firstAttribute="centerY" secondItem="wMC-5c-oNy" secondAttribute="centerY" id="gRc-f8-a6v"/>
+                            <constraint firstItem="zZ6-1G-D85" firstAttribute="centerX" secondItem="wMC-5c-oNy" secondAttribute="centerX" id="xmK-uF-pcd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageViewFilm" destination="RXe-fY-KJl" id="2js-JZ-4bx"/>
+                        <outlet property="labelFilm" destination="Ivo-G9-CjW" id="FVF-LU-qdC"/>
+                        <outlet property="labelFiyat" destination="4Gx-e9-HXI" id="qOQ-3w-tb7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxd-BV-wZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
